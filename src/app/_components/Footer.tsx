@@ -88,8 +88,8 @@ function FooterComponent() {
         </div>
       </div>
       <p className="flex items-center text-sm opacity-80 ">
-        <span className="text-xl ">&#169;</span>2023 Mlab inc. All rigths
-        reserved
+        <span className="text-xl ">&#169;</span>2024 Desing from online and
+        developed By Robin
       </p>
     </WidthContainer>
   );

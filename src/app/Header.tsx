@@ -11,23 +11,23 @@ function HeaderComponent() {
   const navList = [
     {
       name: "Home",
-      url: "/mlab",
+      url: "/",
     },
     {
       name: "Services",
-      url: "/mlab/services",
+      url: "/",
     },
     {
       name: "Result",
-      url: "/mlab/result",
+      url: "/",
     },
     {
       name: "About Us",
-      url: "/mlab/about-us",
+      url: "/",
     },
     {
       name: "Blog",
-      url: "/mlab/blog",
+      url: "/",
     },
   ];
 
@@ -68,14 +68,14 @@ function HeaderComponent() {
       <WidthContainer className="">
         <div className="relative flex h-fit items-center justify-between gap-2">
           <p className="text-2xl font-semibold">Mlab</p>
-          <ul className="hidden gap-4 md:flex">
+          <ul className="hidden gap-4 first:text-primary md:flex">
             {navList.map((nav) => (
               <li key={nav.url}>
                 <a
                   href={nav.url}
                   className={clsx(
                     "font-medium transition duration-200 hover:text-primary",
-                    currentLoc === nav.url && "text-primary",
+                    nav.name === "Home" && "text-primary",
                   )}
                 >
                   {nav.name}
