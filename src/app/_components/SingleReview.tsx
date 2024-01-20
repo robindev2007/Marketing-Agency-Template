@@ -11,7 +11,7 @@ const SingleReview: FC<SingleReviewProps> = ({ reviewData }) => {
   return (
     <div className="flex w-full shrink-0 flex-col gap-7 border-black odd:border-r odd:pr-3 even:pl-3 md:w-1/2">
       <div className="flex h-full gap-2">
-        <img src={dubbleQurtation} alt="" className="h-10 w-fit fill-primary" />
+        <Image height={200} width={200} src={dubbleQurtation} alt="" className="h-10 w-fit fill-primary" />
         <div className="flex flex-col gap-5">
           <h2>{reviewData.title}</h2>
           <p>{reviewData.description}</p>

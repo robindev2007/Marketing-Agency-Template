@@ -1,5 +1,6 @@
 import { loadingSpeener } from "@/lib/constance";
 import clsx from "clsx";
+import Image from "next/image";
 import { ButtonHTMLAttributes, Children, forwardRef } from "react";
 
 type ButtonVariant = "solid" | "outline" | "ghost";
@@ -36,7 +37,11 @@ const Button = ({
 
   return (
     <button disabled={loading} className={merged} {...props}>
-      {!loading ? children : <img src={loadingSpeener}></img>}
+      {!loading ? (
+        children
+      ) : (
+        <Image height={100} width={200} alt="a" src={loadingSpeener} />
+      )}
     </button>
   );
 };
