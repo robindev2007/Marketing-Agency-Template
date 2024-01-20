@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 
 function FooterComponent() {
-  const footerList = [
+  const footerList1 = [
     {
       Tttle: "Solutcon",
       items: [
@@ -23,6 +23,8 @@ function FooterComponent() {
         { name: "Guides", link: "#" },
       ],
     },
+  ];
+  const footerList2 = [
     {
       Tttle: "Company",
       items: [
@@ -44,7 +46,7 @@ function FooterComponent() {
 
   return (
     <WidthContainer>
-      <div className="my-10 flex grid-cols-4 flex-col justify-between gap-8 md:grid md:gap-0">
+      <div className="my-10 flex grid-cols-5 flex-col justify-between gap-8 md:grid md:gap-0">
         <div className="flex flex-col gap-2">
           <p className="text-3xl font-semibold">Mlab</p>
           <p>We will help you show your ads to more people for less money</p>
@@ -66,25 +68,47 @@ function FooterComponent() {
             </div>
           </div>
         </div>
-        <div className="col-span-2 col-start-3 flex flex-wrap justify-between gap-3">
-          {footerList.map((item) => (
-            <div key={item.Tttle} className="flex flex-col gap-3">
-              <p className="text-lg font-medium">{item.Tttle}</p>
+        <div className="col-span-3 col-start-3 grid grid-flow-row gap-2 md:grid-cols-2 ">
+          <div className="grid grid-cols-2 gap-4">
+            {footerList1.map((item) => (
+              <div key={item.Tttle} className="flex flex-col gap-3">
+                <p className="text-lg font-medium">{item.Tttle}</p>
 
-              <ul className="flex flex-col gap-2">
-                {item.items.map((nav) => (
-                  <li key={nav.name}>
-                    <Link
-                      className="opacity-80 transition duration-150 hover:opacity-100"
-                      href={nav.link}
-                    >
-                      {nav.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                <ul className="flex flex-col gap-2">
+                  {item.items.map((nav) => (
+                    <li key={nav.name}>
+                      <Link
+                        className="opacity-80 transition duration-150 hover:opacity-100"
+                        href={nav.link}
+                      >
+                        {nav.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            {footerList2.map((item) => (
+              <div key={item.Tttle} className="flex flex-col gap-3">
+                <p className="text-lg font-medium">{item.Tttle}</p>
+
+                <ul className="flex flex-col gap-2">
+                  {item.items.map((nav) => (
+                    <li key={nav.name}>
+                      <Link
+                        className="opacity-80 transition duration-150 hover:opacity-100"
+                        href={nav.link}
+                      >
+                        {nav.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <p className="flex items-center text-sm opacity-80 ">

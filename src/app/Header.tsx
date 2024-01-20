@@ -44,7 +44,6 @@ function HeaderComponent() {
   }, []);
 
   const cl = () => {
-    console.log(window.scrollY);
     setScrollY(window.scrollY);
   };
 
@@ -70,7 +69,7 @@ function HeaderComponent() {
           <p className="text-2xl font-semibold">Mlab</p>
           <ul className="hidden gap-4 first:text-primary md:flex">
             {navList.map((nav) => (
-              <li key={nav.url}>
+              <li key={nav.name}>
                 <a
                   href={nav.url}
                   className={clsx(
